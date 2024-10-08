@@ -25,4 +25,4 @@ A personal portfolio website for Lelouch Lamperouge built using HTML, CSS, and J
 
 ## Server Live 
 
-Check out the [Server Live](https://razeltamtia21.github.io/website/) to see the responsive website in action across different devices.
+Check out the [Server Live](https://razeltamtia21.github.io/Website-Lelouch-Lamperouge/) to see the responsive website in action across different devices.
