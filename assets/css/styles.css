@@ -205,16 +205,25 @@ img {
   color: var(--first-color);
 }
 .home__img {
-  position: absolute;
   right: 0;
   bottom: 0;
   width: 260px;
+  overflow: hidden;
+  position: absolute;
+  justify-self: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
 .home__blob {
   fill: var(--first-color);
 }
 .home__blob-img {
   width: 360px;
+  border-radius: 0.5rem;
+  transition-duration: 0.5s;
+}
+.home__blob-img:hover, .home__blob-img:active {
+  transform: scale(1.1);
 }
 
 /*BUTTONS*/
