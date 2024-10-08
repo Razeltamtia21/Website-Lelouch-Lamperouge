@@ -27,11 +27,11 @@ const sections = document.querySelectorAll('section[id]')
 const scrollActive = () =>{
     const scrollDown = window.scrollY
 
-  sections.forEach(current =>{
+sections.forEach(current =>{
         const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
-              sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
         
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
             sectionsClass.classList.add('active-link')
@@ -48,10 +48,45 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2000,
     delay: 200,
-//     reset: true
+    reset: true
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+/*===== FORM & SPINNER =====*/
+const form = document.getElementById('contactForm');
+            const result = document.getElementById('result');
+            const spinner = document.getElementById('spinner');
+    
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+    
+                spinner.style.display = 'block';
+    
+                setTimeout(() => {
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        
+                        spinner.style.display = 'none';
+    
+                        if (data.success) {
+                            window.location.href = "https://razeltamtia21.github.io/terkirim/";
+                        } else {
+                            result.innerHTML = "Ada masalah, pesan gagal dikirim";
+                        }
+                    })
+                    .catch(error => {
+                        
+                        spinner.style.display = 'none';
+                        result.innerHTML = "Terjadi kesalahan: " + error.message;
+                    });
+                }, 2000);
+            });

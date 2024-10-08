@@ -1,27 +1,20 @@
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
+
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -114,6 +107,10 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
+.l-header a span {
+  color: var(--first-color);
+}
+
 /*===== NAV =====*/
 .nav {
   height: var(--header-height);
@@ -204,7 +201,7 @@ img {
   font-size: 1.5rem;
   color: var(--second-color);
 }
-.home__social-icon:hover {
+.home__social-icon:hover, .home__social-icon:active{
   color: var(--first-color);
 }
 .home__img {
@@ -230,7 +227,8 @@ img {
   border-radius: 0.5rem;
   transition: 0.3s;
 }
-.button:hover {
+.button:hover, .button:active {
+  background-color: var(--second-color);
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
 }
 
@@ -243,11 +241,20 @@ img {
   margin-bottom: var(--mb-2);
 }
 .about__img {
+  overflow: hidden;
   justify-self: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
+
 .about__img img {
   width: 200px;
   border-radius: 0.5rem;
+  transition-duration: 0.5s;
+}
+
+.about__img img:hover {
+  transform: scale(1.1);
 }
 
 /* ===== SKILLS =====*/
@@ -297,30 +304,28 @@ img {
   width: 85%;
 }
 .skills__js {
-  width: 65%;
+  width: 50%;
 }
 .skills__ux {
-  width: 85%;
-}
-.skills__img {
-  border-radius: 0.5rem;
+  width: 50%;
 }
 
-/* ===== WORK =====*/
-.work__container {
-  row-gap: 2rem;
-}
-.work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
+.skills__img {
   overflow: hidden;
+  justify-self: center;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
-.work__img img {
-  transition: 1s;
+
+.skills__img img {
+  border-radius: 0.5rem;
+  transition-duration: 0.5s;
 }
-.work__img img:hover {
-  transform: scale(1.1);
+
+.skills__img img:hover {
+  transform: scale(1.5);
 }
+
 
 /* ===== CONTACT =====*/
 .contact__input {
@@ -334,12 +339,25 @@ img {
   margin-bottom: var(--mb-4);
 }
 .contact__button {
+  width: 100%;
   display: block;
   border: none;
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+}
+
+/* ===== SPINNER =====*/
+.spinner {
+  display: none; 
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 30px; 
+  height: 30px;
+  animation: spin 1s linear infinite; 
+  margin: 10px auto;
 }
 
 /* ===== FOOTER =====*/

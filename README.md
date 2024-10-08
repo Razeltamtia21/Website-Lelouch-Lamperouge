@@ -1,14 +1,28 @@
-# Portfolio Responsive Complete
-## [Watch it on youtube](https://youtu.be/AKNvTxWOdKw)
-### Portfolio Responsive Complete
+# Lelouch Lamperouge Portfolio Website
 
-- Responsive Personal Portfolio Website HTML CSS & JavaScript.
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+A personal portfolio website for Lelouch Lamperouge built using HTML, CSS, and JavaScript.
 
-💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/@Bedimcode)
 
-![preview img](/preview.png)
+## Features
 
+- **Animations on Scroll**: Smooth animations that trigger when scrolling through different sections.
+- **Mobile-First Design**: Initially designed for mobile devices, ensuring a responsive and fluid experience on all screens.
+- **Smooth Scrolling**: Seamless scrolling behavior between sections for improved user experience.
+- **Cross-Device Compatibility**: Works beautifully across all mobile devices and desktops.
+
+
+## Preview
+
+![Website Preview](./preview.png)
+
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
+
+## Server Live 
+
+Check out the [Server Live](https://razeltamtia21.github.io/website/) to see the responsive website in action across different devices.
