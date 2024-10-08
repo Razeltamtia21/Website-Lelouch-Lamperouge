@@ -208,6 +208,7 @@ img {
   right: 0;
   bottom: 0;
   width: 260px;
+  position: absolute;
 }
 .home__blob {
   fill: var(--first-color);
