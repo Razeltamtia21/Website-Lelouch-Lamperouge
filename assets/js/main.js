@@ -78,7 +78,7 @@ const form = document.getElementById('contactForm');
                         spinner.style.display = 'none';
     
                         if (data.success) {
-                            window.location.href = "https://razeltamtia21.github.io/terkirim/";
+                            window.location.href = "https://razeltamtia21.github.io/terkirim-form/";
                         } else {
                             result.innerHTML = "Ada masalah, pesan gagal dikirim";
                         }
