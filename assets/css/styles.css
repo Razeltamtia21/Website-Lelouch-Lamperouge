@@ -1,4 +1,4 @@
-PL@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
   --header-height: 3rem;
@@ -212,7 +212,7 @@ img {
   position: absolute;
   justify-self: center;
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  box-shadow: 0px 4px 15px rgba(14, 36, 49, 0.1);
 }
 .home__blob {
   fill: var(--first-color);
